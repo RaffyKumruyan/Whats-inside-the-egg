@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's Inside The Egg</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon"
+    href="https://www.iconarchive.com/download/i107480/google/noto-emoji-food-drink/32390-egg.512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="game-container">
+    <div class="game-title">
+      What's inside the Egg?
+    </div>
+
+    <img class="egg-image" onclick="minus1()"
+      src="https://www.iconarchive.com/download/i107480/google/noto-emoji-food-drink/32390-egg.512.png" alt="EGG">
+
+    <div class="counter" id="counter">
+      100000
+    </div>
+  </div>
+
+  <script>
+    // Starting value
+    let count = localStorage.getItem("count") || 100000;
+
+    // Subtracting 1 and saving the new value
+    function minus1() {
+      count = count - 1
+      let counter = document.getElementById("counter");
+      counter.innerText = count
+      localStorage.setItem("count", count);
+    }
+
+    // Set the initial value of the counter
+    let counter = document.getElementById("counter");
+    counter.innerText = count;
+  </script>
+
+</body>
+
+</html>
