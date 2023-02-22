@@ -2,14 +2,14 @@ body {
   font-family: 'Press Start 2P', cursive;
   margin: 0px;
   background-color: rgb(161, 60, 26);
+  /* padding: 80px 30px 70px 30px; I dont know if this is better or margin on the game-container */
 }
 
 .game-container {
-  padding: 30px 0px 30px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 70px 30px 70px 30px;
+  margin: 80px 30px 70px 30px;
 }
 
 .game-title {
@@ -33,4 +33,10 @@ body {
 .counter {
   font-size: 33px;
   color: rgb(236, 162, 55);
+}
+
+.app-version {
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
